@@ -1,0 +1,11 @@
+---
+layout: default
+---
+
+<h2>List of books</h2>
+
+{% for book in site.data['books'] %}
+<ul>
+	<li><a href="{{ book['title'] | downcase | replace: ' ', '-' }}">{{ book['title'] }}</a></li>
+</ul>
+{% endfor %}
